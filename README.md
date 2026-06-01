@@ -16,16 +16,16 @@ DocTruth utilizes **Google's declarative Agent Development Kit (`google-adk`)** 
 
 ```mermaid
 graph TD
-    User([Patient/User]) -->|NPI & Medication Search| FE[Vanilla HTML5/CSS3 Dashboard]
-    FE -->|Async Streaming| GW[FastAPI Gateway /main.py]
-    GW -->|Traces| AZ[Arize Cloud OTel]
+    User["Patient / User"] -->|NPI & Medication Search| FE["Vanilla HTML5/CSS3 Dashboard"]
+    FE -->|Async Streaming| GW["FastAPI Gateway (/main.py)"]
+    GW -->|Traces| AZ["Arize Cloud OTel"]
     
     subgraph Council ["Multi-Agent Audit Council (google-adk)"]
-        CMD[Chief Medical Director] -->|Queries| FFA[Forensic Financial Auditor]
-        CMD -->|Queries| PEC[Pharma Equivalence Chemist]
+        CMD["Chief Medical Director"] -->|Queries| FFA["Forensic Financial Auditor"]
+        CMD -->|Queries| PEC["Pharma Equivalence Chemist"]
         
-        FFA -->|Accesses| CMS[(CMS Open Payments API)]
-        PEC -->|Accesses| FDA[(FDA National Drug Code API)]
+        FFA -->|Accesses| CMS["CMS Open Payments API"]
+        PEC -->|Accesses| FDA["FDA National Drug Code API"]
     end
     
     GW -->|Session Loop| CMD
