@@ -20,7 +20,7 @@ graph TD
     FE -->|Async Streaming| GW[FastAPI Gateway /main.py]
     GW -->|Traces| AZ[Arize Cloud OTel]
     
-    subgraph Multi-Agent Audit Council (google-adk)
+    subgraph Council ["Multi-Agent Audit Council (google-adk)"]
         CMD[Chief Medical Director] -->|Queries| FFA[Forensic Financial Auditor]
         CMD -->|Queries| PEC[Pharma Equivalence Chemist]
         
