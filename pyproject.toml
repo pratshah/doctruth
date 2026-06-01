@@ -1,0 +1,27 @@
+[project]
+name = "doctruth"
+version = "0.1.0"
+description = "Multi-Agent Physician Conflict of Interest (COI) Discovery System"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "google-adk>=0.1.0",
+    "motor>=3.3.0",
+    "pymongo>=4.6.0",
+    "python-dotenv>=1.0.1",
+    "httpx>=0.27.0",
+    "arize-phoenix>=16.3.0",
+    "openinference-instrumentation-google-genai>=1.0.2",
+    "opentelemetry-sdk>=1.41.1",
+    "opentelemetry-exporter-otlp>=1.41.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agents"]
+

@@ -1,0 +1,7 @@
+agent_class: SequentialAgent
+name: chief_medical_director
+description: Orchestrates physician conflict of interest (COI) investigations and compiles discussion guides.
+sub_agents:
+  - config_path: forensic_auditor.yaml
+  - config_path: pharma_chemist.yaml
+
